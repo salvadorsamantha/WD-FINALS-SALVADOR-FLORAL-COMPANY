@@ -1,0 +1,765 @@
+:root {
+    --pink: #e84393;
+  }
+  
+  * {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+  }
+  
+  html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+  }
+  
+  section {
+    padding: 2rem 9%;
+  }
+  
+  .heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #2d110f;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.5);
+  }
+  
+  .heading span {
+    color: var(--pink);
+  }
+  
+  /* Add styles for the button */
+  .home .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .home .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+  }
+  
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffc2cb;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo-image {
+    max-width: 100px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center-align with other elements */
+  }
+  
+  header .logo {
+    font-size: 3rem;
+    color: #c83861;
+    font-weight: bolder;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+  }
+  
+  header .logo span {
+    color: var(--pink);
+  }
+  
+  header .navbar {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(53, 87, 14);
+    margin-left: 1.5rem;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+  }
+  
+  header .icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  header .icons a {
+    font-size: 2rem;
+    color: rgb(53, 87, 14);
+  }
+  
+  header .icons a:hover {
+    color: var(--pink);
+  }
+  
+  header .fa-bars {
+    font-size: 3rem;
+    color: rgb(74, 96, 9);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+  }
+  
+  header .logo-image {
+    max-width: 50px; /* Resize to small */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the image and logo text */
+  }
+  
+  
+  .home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align content to the right */
+    text-align: right; /* Align text inside to the right */
+    min-height: 100vh;
+    background: url('../img/flowershop1.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .home .content {
+    max-width: 40rem; /* Reduce the max-width for a more professional look */
+  }
+  
+  .home .content h3 {
+    font-size: 4rem; /* Reduce font size for better readability */
+    color: #2d110f;
+  }
+  
+  .home .content span {
+    font-size: 2.5rem; /* Adjust font size for the tagline */
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.4; /* Slightly tighter line height */
+  }
+  
+  .home .content p {
+    font-size: 1.6rem; /* Reduce the paragraph font size for professionalism */
+    color: #ffffff;
+    padding: 1rem 0;
+    line-height: 1.6; /* Maintain a comfortable reading line height */
+  }
+  
+  .about .row {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Add this line to center the content horizontally */
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 5rem 0;
+    padding-bottom: 3rem;
+  }
+  
+  .about .row .image-container {
+    flex: 1 1 40rem;
+    position: relative;
+    width: 100%; /* Ensure it takes full width in smaller screens */
+    display: flex; /* Use flexbox to center the content inside the container */
+    justify-content: center; /* Center the image inside the container */
+  }
+  
+  .about .row .image-container {
+    position: relative; /* Ensure the container is positioned relative to hold absolute positioning */
+    width: 100%; /* Ensure full width */
+  }
+  
+  .about .row .image-container h3 {
+    position: absolute;
+    top: 50%;
+    left: 50%; /* Align horizontally */
+    transform: translate(-50%, -50%); /* Correctly center the h3 element */
+    font-size: 3rem;
+    background: #fffffe;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: screen;
+    width: 60rem
+  }
+  
+  .about .row .content {
+    flex: 1 1 40rem;
+    width: 60rem; /* Ensure it takes full width on smaller screens */
+    display: flex; /* Corrected to use 'flex', not 'flexbox' */
+    flex-direction: column; /* Stack the header and paragraph vertically */
+    justify-content: flex-start; /* Align to the top of the container */
+    align-items: center; /* Horizontally center the content */
+    text-align: initial; /* Align the text to its original position */
+    font-size: 2rem; /* Increase the font size for bigger text */
+    margin-left: auto; /* Push content to the right */
+  }
+  
+  .about .row .content h3 {
+    font-size: 2.1rem;
+    margin-bottom: 1rem; /* Add spacing between header and paragraph */
+  }
+  
+  .about .row .content p {
+    font-size: 1.4rem; 
+  }
+  
+  /* Default button style */
+  .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+  }
+  
+  /* Icons Section Styles */
+  .icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+  }
+  
+  /* Adjust the individual icon boxes */
+  .icons-container .icons {
+    border: 2rem; background: #bcc05b;
+    padding: 0.4rem;
+    width: 40rem; /* Set a fixed width for consistency */
+    height: 10rem; /* Set a fixed height */
+    display: flex;
+    align-items: center; /* Center the icons vertically */
+    justify-content: center; /* Center the icons horizontally */
+    flex: 1 1 25rem;
+    font-size: 0.9rem;
+   
+  }
+  
+  .petal {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ff6b81, #ff4757);
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: bottom center;
+    animation: pop-up 3s ease-in-out infinite;
+  }
+  
+  .petal::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-45deg);
+    top: -10px;
+    left: -15px;
+  }
+  
+  .petal::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(45deg);
+    top: -10px;
+    right: -15px;
+  }
+  
+  @keyframes pop-up {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+  
+  /* Adjust the image size */
+  .icons-container .icons img {
+    max-width: 60px; /* Set maximum width to make the images smaller */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  
+  /* Make icons responsive for smaller screens */
+  @media screen and (max-width: 768px) {
+    .icons-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+  
+    .icons-container .icons {
+        width: 50rem; /* Smaller width for responsiveness */
+        height: 5rem; /* Smaller height for responsiveness */
+    }
+  }
+  
+  /* Further responsiveness for very small screens */
+  @media screen and (max-width: 480px) {
+    .icons-container .icons {
+        width: 15rem; /* Even smaller width */
+        height: 4rem; /* Even smaller height */
+    }
+  }
+  
+  .products .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  
+  .products .box {
+    background: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    width: 30rem;
+    position: relative;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .products .box:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  .products .box .discount {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: var(--pink);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+  
+  .products .box .img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 20rem;
+  }
+  
+  .products .box .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .products .box .img .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .products .box .img:hover .icons {
+    opacity: 1;
+  }
+  
+  .products .box .img .icons a {
+    color: #fff;
+    font-size: 2rem;
+    background: var(--pink);
+    padding: 0.8rem;
+    border-radius: 50%;
+    transition: background 0.3s ease;
+  }
+  
+  .products .box .img .icons a:hover {
+    background: #c7337e;
+  }
+  
+  .products .box .content {
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .products .box .content h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  .products .box .content .price {
+    font-size: 1.8rem;
+    color: #555;
+  }
+  
+  .products .box .content .price span {
+    text-decoration: line-through;
+    margin-left: 0.5rem;
+    color: #999;
+  }
+  
+  .review .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  
+  .review .box-container .box {
+    flex: 1 1 calc(30rem - 1.5rem); /* Adjusting for the gap */
+    height: calc(30rem - 1.5rem);   /* Setting height equal to width for squares */
+    box-shadow: 0.5rem 1.5rem rgba(105, 98, 8, 0.362);
+    border-radius: .5rem;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+  
+  .review .box-container .box .fa-quote-right {
+    position: absolute;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: 6rem;
+    color: #fff5a8;
+  }
+  
+  .review .box-container .box .user {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+  }
+  
+  .review .box-container .box .starts i {
+    color: var(--pink);
+    font-size: 2rem;
+  }
+  
+  .review .box-container .box p {
+    color: #999;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding-top: 2rem;
+  }
+  
+  .review .box-container .box .user img {
+    width: 6rem; /* Set the size of the profile picture */
+    height: 6rem; /* Ensure it's a square for circular appearance */
+    border-radius: 50%; /* Make it a circle */
+    object-fit: cover; /* Ensure the image is cropped nicely within the circle */
+    border: 0.2rem solid #c43766; /* Optional: Add a border for aesthetics */
+  }
+  
+  /* General Footer Styles */
+  .footer {
+    background-color: #f8f9fa; /* Light gray background */
+    color: #333; /* Dark text for contrast */
+    padding: 40px 20px;
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between columns */
+  }
+  
+  .box {
+    flex: 1 1 300px; /* Each box takes equal space and is responsive */
+    padding: 20px;
+    background-color: #fff; /* White background for each box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: all 0.3s ease;
+  }
+  
+  .box h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #fb5e98; /* Accent color */
+  }
+  
+  .box a {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666; /* Subtle gray text */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .box a:hover {
+    color: #fb5e98; /* Accent color on hover */
+  }
+  
+  .box img {
+    max-width: 100%; /* Ensure image is responsive */
+    margin-top: 15px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .box {
+        margin-bottom: 20px;
+        flex: 1 1 100%; /* Stack boxes on smaller screens */
+    }
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* Media Queries for Responsiveness */
+  
+  /* Hover effect */
+  .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .btn {
+        font-size: 1.4rem; /* Adjust font size for tablets */
+        padding: 0.9rem 1.8rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .btn {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem 1.6rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .btn {
+        font-size: 1rem; /* Further reduce font size for very small screens */
+        padding: 0.7rem 1.4rem; /* Further reduce padding */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .about .row {
+        gap: 1.5rem; /* Adjust gap for tablets */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 45rem; /* Adjust image container size */
+    }
+  
+    .about .row .content {
+        flex: 1 1 45rem; /* Adjust content size */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about .row {
+        gap: 1rem; /* Smaller gap on mobile */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 100%; /* Image container takes full width */
+    }
+  
+    .about .row .content {
+        flex: 1 1 100%; /* Content takes full width */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .about .row {
+        gap: 1rem; /* Ensure minimal gap on very small screens */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 100%; /* Image container full width */
+    }
+  
+    .about .row .content {
+        flex: 1 1 100%; /* Content full width */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 1.8rem; /* Reduce heading size for very small screens */
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+  
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+  
+    .home .content span {
+        font-size: 3rem;
+    }
+  
+    header .logo {
+        font-size: 2.5rem;
+    }
+  
+    header .navbar a {
+        font-size: 1.8rem;
+    }
+  
+    header .icons a {
+        font-size: 1.8rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header .fa-bars {
+        display: block; /* Show the hamburger icon */
+    }
+  
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffe8b8;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
+    }
+  
+    header .navbar.active {
+        display: flex; /* Display when toggled */
+    }
+  
+    header .navbar a {
+        padding: 1.5rem;
+        background: #ff7487;
+        border: 0.1rem solid rgb(255, 242, 212);
+        width: 100%;
+        text-align: center;
+    }
+  
+    .home .content h3 {
+        font-size: 4rem;
+    }
+  
+    .home .content span {
+        font-size: 4rem;
+    }
+  
+    .home .content {
+        max-width: 30rem; /* Adjust width for smaller screens */
+    }
+  
+    .home .content p {
+        font-size: 1.4rem;
+    }
+  
+    .home .btn {
+        font-size: 1.4rem; /* Adjust button size */
+        padding: 1rem 1.5rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+  
+    header .icons a {
+        font-size: 2.5rem;
+    }
+  
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+  
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+  
+    .home .content span {
+        font-size: 3rem;
+    }
+  
+    .home .content {
+        max-width: 25rem; /* Further reduce width */
+    }
+  
+    .home .content p {
+        font-size: 1.2rem;
+    }
+  
+    .home .btn {
+        font-size: 1.2rem; /* Further reduce button font size */
+        padding: 1rem 1.2rem; /* Adjust button padding */
+    }
+  }
+  

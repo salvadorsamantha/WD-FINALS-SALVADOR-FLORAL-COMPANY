@@ -1,0 +1,490 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #2d110f;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.5);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+/* Add styles for the button */
+.home .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.home .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffc2cb;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo-image {
+    max-width: 100px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center-align with other elements */
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #c83861;
+    font-weight: bolder;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(53, 87, 14);
+    margin-left: 1.5rem;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .icons a {
+    font-size: 2rem;
+    color: rgb(53, 87, 14);
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: rgb(74, 96, 9);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+header .logo-image {
+    max-width: 50px; /* Resize to small */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the image and logo text */
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    min-height: 100vh;
+    background: url(/assets/images/flower\ shop\ 3.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-right: 9%;
+}
+
+.home .content {
+    max-width: 40rem;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    color: #2d110f;
+}
+
+.home .content span {
+    font-size: 2.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.4;
+}
+
+.home .content p {
+    font-size: 1.6rem;
+    color: #ffffff;
+    padding: 1rem 0;
+    line-height: 1.6;
+}
+
+.about-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.about-us .image-container {
+    flex: 1 1 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us .content {
+    flex: 1 1 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.about-us .content h3 {
+    font-size: 2.1rem;
+}
+
+.about-us .content p {
+    font-size: 1.4rem;
+}
+
+.about-us .btn {
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.about-us .btn:hover {
+    background: #d7337e;
+}
+
+@media (max-width: 991px) {
+    .about-us .row {
+        padding: 0;
+    }
+
+    header .navbar {
+        display: none;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+}
+
+/* Section Styling */
+section {
+    padding: 4rem 8%;
+    background-color: var(--light-cream);
+    position: relative;
+    overflow: hidden;
+}
+
+/* About Us Container Styling */
+.about-us .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Heading Styling */
+.about-us h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.about-us h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--soft-pink);
+}
+
+/* Paragraph Styling */
+.about-us .lead {
+    font-size: 1.6rem;
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.about-us p {
+    font-size: 1.4rem;
+    color: #333;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.about-us p::before {
+    content: '✨';
+    font-size: 1.6rem;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Image Styling */
+.about-img {
+    max-width: 100%;
+    border-radius: 1.5rem;
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-img::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('https://img.icons8.com/ios/452/flower.png');
+    background-size: 50px;
+    background-position: top right;
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    transition: all 0.5s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+.about-img:hover::before {
+    opacity: 0.7;
+}
+
+/* Content Column Styling */
+.about-us .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.about-us .col-lg-6,
+.about-us .col-xl-7 {
+    order: 2;
+}
+
+/* For large screens, content is aligned right */
+.about-us .col-lg-6 {
+    flex: 0 0 50%;
+    padding-left: 2rem;
+}
+
+.about-us .col-xl-7 {
+    flex: 0 0 50%;
+}
+
+/* Flower Icon Styling */
+.about-us .flower-icon img {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Text Box Styling */
+.about-us .d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.about-us h4 {
+    font-size: 1.8rem;
+    color: var(--dark-gray);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.about-us .text-secondary {
+    color: #6c757d;
+}
+
+/* Button Styling */
+.about-us .btn-wrapper {
+    text-align: center; /* Centers the button horizontally */
+    margin-top: 2rem; /* Adds space above the button */
+}
+
+.about-us .btn {
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0px 10px 15px rgba(64, 74, 11, 0.755);
+    display: inline-block;
+}
+
+
+.about-us .btn:hover {
+    background-color: var(--soft-purple);
+    transform: translateY(-3px);
+    box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .about-us h2 {
+        font-size: 2.4rem;
+    }
+
+    .about-us .lead {
+        font-size: 1.4rem;
+    }
+
+    .about-us p {
+        font-size: 1.3rem;
+    }
+
+    .about-us .btn {
+        font-size: 1.4rem;
+        padding: 1rem 2rem;
+    }
+
+    .about-us .container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-us .col-md-6 {
+        flex: 1 1 100%;
+        margin-bottom: 1rem;
+    }
+
+    .about-us h2 {
+        font-size: 2rem;
+    }
+
+    .about-us .lead {
+        font-size: 1.2rem;
+    }
+
+    .about-us p {
+        font-size: 1.1rem;
+    }
+
+    .about-us .btn {
+        font-size: 1.3rem;
+        padding: 1rem 1.5rem;
+    }
+
+    .about-us .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 3rem 5%;
+    }
+
+    .about-us h2 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .about-us .lead {
+        font-size: 1.1rem;
+    }
+
+    .about-us .d-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .about-us .flower-icon img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .about-img {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-us .btn {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}

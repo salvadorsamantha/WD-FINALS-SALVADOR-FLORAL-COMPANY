@@ -1,0 +1,521 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #2d110f;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.5);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+/* Add styles for the button */
+.home .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.home .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffc2cb;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo-image {
+    max-width: 100px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center-align with other elements */
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #c83861;
+    font-weight: bolder;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(53, 87, 14);
+    margin-left: 1.5rem;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .icons a {
+    font-size: 2rem;
+    color: rgb(53, 87, 14);
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: rgb(74, 96, 9);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+header .logo-image {
+    max-width: 50px; /* Resize to small */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the image and logo text */
+}
+
+/* Default button style */
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+}
+
+/* Icons Section Styles */
+.icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+}
+
+/* Adjust the individual icon boxes */
+.icons-container .icons {
+    border: 2rem; background: #bcc05b;
+    padding: 0.4rem;
+    width: 40rem; /* Set a fixed width for consistency */
+    height: 10rem; /* Set a fixed height */
+    display: flex;
+    align-items: center; /* Center the icons vertically */
+    justify-content: center; /* Center the icons horizontally */
+    flex: 1 1 25rem;
+    font-size: 0.9rem;
+   
+}
+
+
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ff6b81, #ff4757);
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: bottom center;
+    animation: pop-up 3s ease-in-out infinite;
+  }
+  
+  .petal::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-45deg);
+    top: -10px;
+    left: -15px;
+  }
+  
+  .petal::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(45deg);
+    top: -10px;
+    right: -15px;
+  }
+  
+  @keyframes pop-up {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+/* Make icons responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .icons-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .icons-container .icons {
+        width: 50rem; /* Smaller width for responsiveness */
+        height: 5rem; /* Smaller height for responsiveness */
+    }
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #d7337e;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    max-width: 500%;
+    height: auto;
+    background: #ff7487;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.4rem;
+}
+
+
+/* Checkout Form */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card .form-control {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.card .form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+.card button.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button.btn:hover {
+    background-color: #3e8e41;
+}
+
+/* Cart Section */
+.col-md-4 {
+    margin-top: 20px;
+    background-color: #fff8f5; /* Warm background color */
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.text-muted {
+    color: #fb5e98; /* Accent color matching the theme */
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* List Group Items */
+.list-group-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #fddde1; /* Soft pink border */
+    border-radius: 8px;
+    margin-bottom: 15px; /* Spacing between items */
+    background-color: #ffeef1; /* Lighter pink for contrast */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.list-group-item:hover {
+    transform: scale(1.02); /* Slight scale-up on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Highlight effect */
+}
+
+/* Product Images */
+.product-img {
+    width: 70px; /* Medium size images */
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px; /* Rounded corners */
+    margin-right: 15px;
+    border: 2px solid #fb5e98; /* Accent border around images */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Details */
+.product-details {
+    flex-grow: 1;
+    margin-left: 10px;
+    text-align: left;
+}
+
+.product-details h6 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333; /* Dark text for contrast */
+}
+
+.product-details small {
+    color: #666; /* Softer gray for description */
+    font-size: 0.9rem;
+}
+
+/* Price Styling */
+.list-group-item span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fb5e98; /* Accent color for price */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .product-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .product-details h6 {
+        font-size: 1rem;
+    }
+
+    .product-details small {
+        font-size: 0.85rem;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-details {
+        margin: 10px 0; /* Adjust spacing for stacked items */
+    }
+}
+
+/* Checkout Button */
+.checkout-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fb5e98; /* Matching theme color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%; /* Full width */
+}
+
+.checkout-btn:hover {
+    background-color: #e04b84; /* Slightly darker shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow */
+}
+
+.checkout-btn i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 1.2rem; /* Slightly larger icon */
+}
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+
+    header .logo {
+        font-size: 2.5rem;
+    }
+
+    header .navbar a {
+        font-size: 1.8rem;
+    }
+
+    .product-details h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+
+    .product-details .price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    .product-details {
+        padding: 2rem 5%;
+    }
+
+    .product-details h1 {
+        font-size: 2rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .product-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-details p {
+        font-size: 1.2rem;
+    }
+
+    .product-details .price {
+        font-size: 1.6rem;
+    }
+}

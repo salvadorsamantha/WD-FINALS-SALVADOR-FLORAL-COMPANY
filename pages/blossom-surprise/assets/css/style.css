@@ -1,0 +1,384 @@
+:root {
+    --pink: #e84393;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+}
+
+.heading {
+    text-align: center;
+    font-size: 4rem;
+    color: #2d110f;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: rgba(255, 51, 153, 0.5);
+}
+
+.heading span {
+    color: var(--pink);
+}
+
+/* Add styles for the button */
+.home .btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.home .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffc2cb;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+header .logo-image {
+    max-width: 100px; /* Adjust the size of the image */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Center-align with other elements */
+}
+
+header .logo {
+    font-size: 3rem;
+    color: #c83861;
+    font-weight: bolder;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .logo span {
+    color: var(--pink);
+}
+
+header .navbar {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .navbar a {
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: rgb(53, 87, 14);
+    margin-left: 1.5rem;
+    font-family: "Dancing Script", cursive; /* Graceful cursive font */
+}
+
+header .icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header .icons a {
+    font-size: 2rem;
+    color: rgb(53, 87, 14);
+}
+
+header .icons a:hover {
+    color: var(--pink);
+}
+
+header .fa-bars {
+    font-size: 3rem;
+    color: rgb(74, 96, 9);
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+    border: 0.1rem solid rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+header .logo-image {
+    max-width: 50px; /* Resize to small */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 1rem; /* Add spacing between the image and logo text */
+}
+
+/* Default button style */
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+}
+
+/* Icons Section Styles */
+.icons-container {
+    background: #fffffe;
+    display: flex; /* Use flexbox to align icons horizontally */
+    gap: 0.2rem; /* Provide spacing between the icons */
+    padding-top: 0.1rem;
+    padding-bottom: 0.1rem;
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Vertically center the icons */
+    flex-wrap: nowrap; /* Prevent the icons from wrapping into new lines */
+}
+
+/* Adjust the individual icon boxes */
+.icons-container .icons {
+    border: 2rem; background: #bcc05b;
+    padding: 0.4rem;
+    width: 40rem; /* Set a fixed width for consistency */
+    height: 10rem; /* Set a fixed height */
+    display: flex;
+    align-items: center; /* Center the icons vertically */
+    justify-content: center; /* Center the icons horizontally */
+    flex: 1 1 25rem;
+    font-size: 0.9rem;
+   
+}
+
+
+.petal {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ff6b81, #ff4757);
+    border-radius: 50% 50% 50% 50%;
+    transform-origin: bottom center;
+    animation: pop-up 3s ease-in-out infinite;
+  }
+  
+  .petal::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(-45deg);
+    top: -10px;
+    left: -15px;
+  }
+  
+  .petal::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    background: radial-gradient(circle, #ffaec9, #ff6b81);
+    border-radius: 50% 50% 50% 50%;
+    transform: rotate(45deg);
+    top: -10px;
+    right: -15px;
+  }
+  
+  @keyframes pop-up {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.5);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 0;
+    }
+  }
+
+
+
+
+
+/* Make icons responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .icons-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .icons-container .icons {
+        width: 50rem; /* Smaller width for responsiveness */
+        height: 5rem; /* Smaller height for responsiveness */
+    }
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #d7337e;
+}
+
+/* Product details section */
+.product-details {
+    padding: 3rem 9%;
+    text-align: center;
+}
+
+.product-details h1 {
+    font-size: 3rem;
+    color: #2d110f;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.product-details p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.product-details .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pink);
+    margin-bottom: 2rem;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    max-width: 500%;
+    height: auto;
+    background: #ff7487;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.4rem;
+}
+
+
+
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+
+    header .logo {
+        font-size: 2.5rem;
+    }
+
+    header .navbar a {
+        font-size: 1.8rem;
+    }
+
+    .product-details h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+
+    .product-details .price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    .product-details {
+        padding: 2rem 5%;
+    }
+
+    .product-details h1 {
+        font-size: 2rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .product-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-details p {
+        font-size: 1.2rem;
+    }
+
+    .product-details .price {
+        font-size: 1.6rem;
+    }
+}

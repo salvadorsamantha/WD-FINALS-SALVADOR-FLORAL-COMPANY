@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <title>Flower Delivery.PH</title>
+    <!-- External Stylesheet -->
+    <link rel="stylesheet" href="../contact-us/style.css">
+</head>
+
+
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+<!-- Header Section -->
+<header>
+    <div class="fa-bars" onclick="toggleNavbar()">
+        &#9776; <!-- Hamburger icon -->
+    </div>
+    <img src="./Heading-removebg-preview.webp" alt="Flower Delivery.PH" class="logo-image">
+    <a href="#" class="logo">Flower Delivery.PH<span>.</span></a>
+    <nav class="navbar">
+        <a href="./index.html">Home</a>
+        <a href="./index.html#about">About</a>
+        <a href="./index.html#products">Products</a>
+        <a href="./index.html#review">Review</a>
+        <a href="../contact us/index.html">Form</a>
+    </nav>
+</header>
+        
+    </nav>
+    <div class="icons">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    
+    </div>
+</header>
+
+
+<!-- Main layout -->
+<main class="mt-5 pt-4">
+    <div class="container">
+        <!-- Heading -->
+        <h2 class="my-5 text-center">Checkout form</h2>
+
+        <!-- Grid row -->
+        <div class="row">
+            <!-- Grid column for form -->
+            <div class="col-md-8 mb-4">
+                <div class="card p-4">
+                    <!-- Form rows -->
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-2">
+                            <div class="form-outline">
+                                <input type="text" id="firstName" class="form-control" />
+                                <label class="form-label" for="firstName">First name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <div class="form-outline">
+                                <input type="text" id="lastName" class="form-control" />
+                                <label class="form-label" for="lastName">Last name</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="input-group mb-4">
+                        <span class="input-group-text" id="username">@</span>
+                        <input type="text" class="form-control" placeholder="Username" />
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-outline mb-4">
+                        <input type="email" class="form-control" placeholder="youremail@example.com" />
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-outline mb-4">
+                        <input type="text" class="form-control" placeholder="1234 Main St" />
+                    </div>
+
+                    <!-- Country, State, Zip -->
+                    <div class="row">
+                        <div class="col-lg-4 mb-4">
+                            <input type="text" class="form-control" placeholder="Country" />
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <input type="text" class="form-control" placeholder="State" />
+                        </div>
+                        <div class="col-lg-4 mb-4">
+                            <input type="text" class="form-control" placeholder="Zip" />
+                        </div>
+                    </div>
+
+                    <button class="btn">Continue to checkout</button>
+                </div>
+            </div>
+
+            <!-- Grid column for cart -->
+<div class="col-md-4">
+    <h4 class="text-muted">Your cart</h4>
+    <ul class="list-group">
+        <!-- Product 1 -->
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <img src="./Euphoria Basket.jpg" alt="Product 1" class="product-img">
+            <div class="product-details">
+                <h6>Rose Bouquet</h6>
+                <small>Fresh red roses</small>
+            </div>
+            <span>$25</span>
+        </li>
+        <!-- Product 2 -->
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <img src="./CoralLeafBouquet.jpg" alt="Product 2" class="product-img">
+            <div class="product-details">
+                <h6>Sunflower Basket</h6>
+                <small>Bright and cheerful</small>
+            </div>
+            <span>$30</span>
+        </li>
+        <!-- Product 3 -->
+        <li class="list-group-item d-flex align-items-center justify-content-between">
+            <img src="./pinkandgreen.jpg" alt="Product 3" class="product-img">
+            <div class="product-details">
+                <h6>Tulip Arrangement</h6>
+                <small>Elegant white tulips</small>
+            </div>
+            <span>$20</span>
+        </li>
+    </ul>
+    <!-- Checkout Button -->
+    <button class="checkout-btn">
+        <i class="fas fa-shopping-cart"></i> <!-- Cart icon -->
+        <i class="fas fa-plus"></i> <!-- Plus icon -->
+        Check out now
+    </button>
+</div>
+</div>
+
