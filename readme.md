@@ -6,23 +6,23 @@
 <div align="center">
   <a href="https://github.com/zyx-0314/">
   <!-- TODO: If you want to add logo or banner you can add it here -->
-    <img src="./assets/img/nyebe_white.png" alt="Nyebe" width="130" height="100">
+    <img src="./assets/img/Heading-removebg-preview.webp" alt="Flower Delivery.PH" width="130" height="100">
   </a>
 <!-- TODO: Change Title to the name of the title of your Project -->
-  <h3 align="center">Title</h3>
+  <h3 align="center">Flower Delivery.Ph</h3>
 </div>
 <!-- TODO: Make a short description -->
 <div align="center">
-  Short Description. (Optional)
+  Floral Shop Website
 </div>
 
 <br />
 
 <!-- TODO: Change the zyx-0314 into your github username  -->
 <!-- TODO: Change the WD-Template-Project into the same name of your folder -->
-![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-Template-Project)
+![](https://visit-counter.vercel.app/counter.png?page=zyx-0314/WD-FINALS-SALVADOR-FLORAL-COMPANY)
 
-[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8)
+[![wakatime](https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8.svg)]([https://wakatime.com/badge/user/018dd99a-4985-4f98-8216-6ca6fe2ce0f8/project/63501637-9a31-42f0-960d-4d0ab47977f8](https://wakatime.com/@09d4efe9-222d-4c0d-a5d1-999f614e91ef/projects/cgbzmbblhh?start=2024-11-22&end=2024-11-28))
 
 ---
 
@@ -34,21 +34,21 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#overview">Overview</a>
+      <a href="#home">Home</a>
       <ol>
         <li>
-          <a href="#key-components">Key Components</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#technology">Technology</a>
+          <a href="#products">Products</a>
         </li>
       </ol>
     </li>
     <li>
-      <a href="#rule,-practices-and-principles">Rules, Practices and Principles</a>
+      <a href="#Contacts">Contacts</a>
     </li>
     <li>
-      <a href="#resources">Resources</a>
+        <a href="#form">Form</a>
     </li>
   </ol>
 </details>
@@ -56,23 +56,7 @@
 ---
 
 ## Overview
-
-<!-- TODO: To be changed -->
-<!-- The following are just sample -->
-Description of the project in details.
-
-Guiding Question:
-- What is the project
-- Whats the purpose
-- What are key components
-- What technology used and how it is used
-
-### Key Components
-<!-- TODO: List of Key Components -->
-<!-- The following are just sample -->
-- MultiPage Website/Single Page Website
-- Parallax transition
-- Transactional
+Flower Delivery.PH is a project designed to serve as an online platform for users to conveniently order and arrange the delivery of fresh flowers. This user-friendly website integrates HTML, CSS, and Bootstrap to create a visually appealing and responsive interface that ensures a seamless user experience across various devices.
 
 ### Technology
 <!-- TODO: List of Technology Used -->
@@ -119,4 +103,11 @@ WD-ProjectName
 <!-- TODO: Add References -->
 | Title | Purpose | Link |
 |-|-|-|
-| Sample Title | Sample purpose would be here like this and this is the example of what it is. | trykolang.com |
+| Bootstrap Hero Section | Used for product | (https://mdbootstrap.com/docs/standard/extended/hero/) |
+| Responsive Flower Website | Mainly used as a reference guide, to provide a plan of structure of my website | https://youtu.be/4n3TBgeld9s?si=axevuwyyVaOUOC_R |
+| Flower Delivery.PH | Main Website used for refrences | (https://www.flowerdelivery.ph/) |
+| Item Shop Template | Used for every product landing pages |(https://startbootstrap.com/template/shop-item) |
+| Bootstrap Middle Button | Used in the about me section with revised modifications |(https://startbootstrap.com/template/shop-item) |
+| Footer | Revised code for footer with added image logo |(https://startbootstrap.com/template/shop-item) |
+| Bootstrap About Us landing page | Used for about us landing page |(https://bootstrapbrain.com/component/bootstrap-about-us-page-section/#code) |
+| Bootstrap Forms Page | Used and revised code for checkout form |(https://mdbootstrap.com/snippets/standard/mdbootstrap/4809952) |
