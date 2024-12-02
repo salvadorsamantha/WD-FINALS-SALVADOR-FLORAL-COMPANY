@@ -165,86 +165,85 @@
   
  /* About Us Section */
 .about-us {
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
 }
 
 .about-us .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap; /* Allow wrapping for small screens */
-  align-items: center;
-  gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /* Adjust for smaller screens */
+    align-items: center;
+    gap: 2rem; /* Space between image and content */
 }
 
 .about-us .image-container {
-  flex: 1 1 40%; /* Image takes 40% of space */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    flex: 1 1 40%; /* Image takes 40% width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-us .image-container img {
-  max-width: 100%; /* Ensure image is responsive */
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    max-width: 100%; /* Responsive image */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
 .about-us .content {
-  flex: 1 1 50%; /* Content takes 50% of space */
-  text-align: left;
-  padding: 1rem;
+    flex: 1 1 50%; /* Content takes 50% width */
+    text-align: left;
+    padding: 1rem;
 }
 
 .about-us .content h2 {
-  font-size: 2.5rem;
-  color: #333;
-  margin-bottom: 1rem;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
 }
 
 .about-us .content p {
-  font-size: 1.6rem;
-  color: #555;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
 }
 
 .about-us .content .btn {
-  display: inline-block;
-  background: #007bff;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.8rem 1.5rem;
-  font-size: 1.4rem;
-  border-radius: 5px;
-  transition: background 0.3s ease;
+    display: inline-block;
+    background: #007bff; /* Blue button */
+    color: #fff;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.4rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
 }
 
 .about-us .content .btn:hover {
-  background: #0056b3;
+    background: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .about-us .container {
-      flex-direction: column; /* Stack image and content */
-  }
-  .about-us .image-container,
-  .about-us .content {
-      flex: 1 1 100%; /* Full width for small screens */
-  }
-  .about-us .content h2 {
-      text-align: center;
-  }
-  .about-us .content p {
-      text-align: center;
-  }
-  .about-us .content .btn {
-      display: block;
-      margin: 0 auto;
-  }
+    .about-us .container {
+        flex-direction: column; /* Stack content for small screens */
+    }
+    .about-us .image-container,
+    .about-us .content {
+        flex: 1 1 100%; /* Full width */
+    }
+    .about-us .content h2, 
+    .about-us .content p {
+        text-align: center; /* Center text */
+    }
+    .about-us .content .btn {
+        display: block;
+        margin: 0 auto; /* Center button */
+    }
 }
+
   
   /* Default button style */
   .btn {
