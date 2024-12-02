@@ -163,84 +163,88 @@
     line-height: 1.6; /* Maintain a comfortable reading line height */
   }
   
-  .about .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Space out the content nicely */
-    gap: 2rem; /* Maintain spacing between image and content */
-    flex-wrap: wrap;
-    padding: 3rem 1.5rem; /* Adjust padding for better spacing */
-    max-width: 1200px; /* Limit the width for better alignment */
-    margin: 0 auto; /* Center the row in the container */
+ /* About Us Section */
+.about-us {
+  padding: 4rem 2rem;
+  background-color: #f9f9f9;
 }
 
-.about .row .image-container {
-    flex: 1 1 40%; /* Adjust size for better proportion */
-    position: relative;
-    display: flex; /* Use flexbox to center the image */
-    justify-content: center;
-    align-items: center; /* Ensure vertical centering */
+.about-us .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for small screens */
+  align-items: center;
+  gap: 2rem;
 }
 
-.about .row .image-container img {
-    max-width: 100%; /* Ensure the image is responsive */
-    border-radius: 8px; /* Add subtle rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add depth with a shadow */
+.about-us .image-container {
+  flex: 1 1 40%; /* Image takes 40% of space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about .row .image-container h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2.5rem; /* Adjust size for better hierarchy */
-    color: #333; /* Use a darker text color for contrast */
-    background: rgba(255, 255, 255, 0.8); /* Add a subtle transparent background */
-    padding: 1rem 1.5rem;
-    border-radius: 8px; /* Match the image styling */
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+.about-us .image-container img {
+  max-width: 100%; /* Ensure image is responsive */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
 }
 
-.about .row .content {
-    flex: 1 1 50%; /* Adjust size for better balance */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start; /* Align content to the left */
-    text-align: left; /* Align text naturally */
-    padding: 1rem; /* Add padding for spacing */
+.about-us .content {
+  flex: 1 1 50%; /* Content takes 50% of space */
+  text-align: left;
+  padding: 1rem;
 }
 
-.about .row .content h3 {
-    font-size: 2.4rem; /* Increase font size for headings */
-    font-weight: 600; /* Add emphasis with bold font */
-    color: #444; /* Use a more neutral color */
-    margin-bottom: 1rem;
+.about-us .content h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-.about .row .content p {
-    font-size: 1.6rem; /* Increase readability */
-    color: #666; /* Use a softer text color for paragraphs */
-    line-height: 1.6; /* Improve spacing between lines */
-    margin-bottom: 1.5rem;
+.about-us .content p {
+  font-size: 1.6rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
 }
 
-.about .row .content .btn {
-    display: inline-block;
-    font-size: 1.4rem;
-    background: #ff6f61; /* Add a vibrant color for the button */
-    color: #fff;
-    padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px; /* Round the button corners */
-    transition: background 0.3s ease;
+.about-us .content .btn {
+  display: inline-block;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
-.about .row .content .btn:hover {
-    background: #ff4a3b; /* Darken the button color on hover */
+.about-us .content .btn:hover {
+  background: #0056b3;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-us .container {
+      flex-direction: column; /* Stack image and content */
+  }
+  .about-us .image-container,
+  .about-us .content {
+      flex: 1 1 100%; /* Full width for small screens */
+  }
+  .about-us .content h2 {
+      text-align: center;
+  }
+  .about-us .content p {
+      text-align: center;
+  }
+  .about-us .content .btn {
+      display: block;
+      margin: 0 auto;
+  }
+}
   
   /* Default button style */
   .btn {
