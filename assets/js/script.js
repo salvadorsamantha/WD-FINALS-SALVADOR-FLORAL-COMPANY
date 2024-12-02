@@ -20,4 +20,17 @@ function createPetal() {
   
   // Generate petals continuously at random intervals
   setInterval(createPetal, 400);
+
+  document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+      const answer = button.nextElementSibling;
+      const isVisible = answer.style.display === 'block';
+  
+      document.querySelectorAll('.faq-answer').forEach(item => item.style.display = 'none');
+      
+      if (!isVisible) {
+        answer.style.display = 'block';
+      }
+    });
+  });
   
