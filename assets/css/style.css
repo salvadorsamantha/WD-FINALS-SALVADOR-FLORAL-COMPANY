@@ -544,6 +544,12 @@
     margin-top: 15px;
   }
   
+
+
+
+
+
+/* Media Queries for Responsiveness */
   /* Responsive Design */
   @media (max-width: 768px) {
     .box-container {
@@ -557,18 +563,7 @@
     }
   }
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* Media Queries for Responsiveness */
+
   
   /* Hover effect */
   .btn:hover {
