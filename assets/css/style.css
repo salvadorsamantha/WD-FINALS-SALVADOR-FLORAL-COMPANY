@@ -166,59 +166,81 @@
   .about .row {
     display: flex;
     align-items: center;
-    justify-content: center; /* Add this line to center the content horizontally */
-    gap: 2rem;
+    justify-content: space-between; /* Space out the content nicely */
+    gap: 2rem; /* Maintain spacing between image and content */
     flex-wrap: wrap;
-    padding: 5rem 0;
-    padding-bottom: 3rem;
-  }
-  
-  .about .row .image-container {
-    flex: 1 1 40rem;
+    padding: 3rem 1.5rem; /* Adjust padding for better spacing */
+    max-width: 1200px; /* Limit the width for better alignment */
+    margin: 0 auto; /* Center the row in the container */
+}
+
+.about .row .image-container {
+    flex: 1 1 40%; /* Adjust size for better proportion */
     position: relative;
-    width: 100%; /* Ensure it takes full width in smaller screens */
-    display: flex; /* Use flexbox to center the content inside the container */
-    justify-content: center; /* Center the image inside the container */
-  }
-  
-  .about .row .image-container {
-    position: relative; /* Ensure the container is positioned relative to hold absolute positioning */
-    width: 100%; /* Ensure full width */
-  }
-  
-  .about .row .image-container h3 {
+    display: flex; /* Use flexbox to center the image */
+    justify-content: center;
+    align-items: center; /* Ensure vertical centering */
+}
+
+.about .row .image-container img {
+    max-width: 100%; /* Ensure the image is responsive */
+    border-radius: 8px; /* Add subtle rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add depth with a shadow */
+}
+
+.about .row .image-container h3 {
     position: absolute;
     top: 50%;
-    left: 50%; /* Align horizontally */
-    transform: translate(-50%, -50%); /* Correctly center the h3 element */
-    font-size: 3rem;
-    background: #fffffe;
-    padding: 1rem 2rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem; /* Adjust size for better hierarchy */
+    color: #333; /* Use a darker text color for contrast */
+    background: rgba(255, 255, 255, 0.8); /* Add a subtle transparent background */
+    padding: 1rem 1.5rem;
+    border-radius: 8px; /* Match the image styling */
     text-align: center;
-    mix-blend-mode: screen;
-    width: 60rem
-  }
-  
-  .about .row .content {
-    flex: 1 1 40rem;
-    width: 60rem; /* Ensure it takes full width on smaller screens */
-    display: flex; /* Corrected to use 'flex', not 'flexbox' */
-    flex-direction: column; /* Stack the header and paragraph vertically */
-    justify-content: flex-start; /* Align to the top of the container */
-    align-items: center; /* Horizontally center the content */
-    text-align: initial; /* Align the text to its original position */
-    font-size: 2rem; /* Increase the font size for bigger text */
-    margin-left: auto; /* Push content to the right */
-  }
-  
-  .about .row .content h3 {
-    font-size: 2.1rem;
-    margin-bottom: 1rem; /* Add spacing between header and paragraph */
-  }
-  
-  .about .row .content p {
-    font-size: 1.4rem; 
-  }
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.about .row .content {
+    flex: 1 1 50%; /* Adjust size for better balance */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start; /* Align content to the left */
+    text-align: left; /* Align text naturally */
+    padding: 1rem; /* Add padding for spacing */
+}
+
+.about .row .content h3 {
+    font-size: 2.4rem; /* Increase font size for headings */
+    font-weight: 600; /* Add emphasis with bold font */
+    color: #444; /* Use a more neutral color */
+    margin-bottom: 1rem;
+}
+
+.about .row .content p {
+    font-size: 1.6rem; /* Increase readability */
+    color: #666; /* Use a softer text color for paragraphs */
+    line-height: 1.6; /* Improve spacing between lines */
+    margin-bottom: 1.5rem;
+}
+
+.about .row .content .btn {
+    display: inline-block;
+    font-size: 1.4rem;
+    background: #ff6f61; /* Add a vibrant color for the button */
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px; /* Round the button corners */
+    transition: background 0.3s ease;
+}
+
+.about .row .content .btn:hover {
+    background: #ff4a3b; /* Darken the button color on hover */
+}
+
   
   /* Default button style */
   .btn {
