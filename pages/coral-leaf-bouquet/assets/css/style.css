@@ -443,6 +443,8 @@ header {
     }
 }
 
+
+
 /* Media Queries for Responsiveness */
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -651,4 +653,3 @@ header {
         padding: 1rem 1.2rem; /* Adjust button padding */
     }
   }
-  

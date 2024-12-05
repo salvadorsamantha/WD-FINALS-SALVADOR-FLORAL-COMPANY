@@ -229,9 +229,6 @@ header .logo-image {
   }
 
 
-
-
-
 /* Make icons responsive for smaller screens */
 @media screen and (max-width: 768px) {
     .icons-container {
@@ -309,76 +306,211 @@ footer p {
 
 
 
+/* Media Queries for Responsiveness */
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .box-container {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .box {
+        margin-bottom: 20px;
+        flex: 1 1 100%; /* Stack boxes on smaller screens */
+    }
+  }
+  
 
-
-
-/* Media queries for responsiveness */
-@media (max-width: 1024px) {
+  
+  /* Hover effect */
+  .btn:hover {
+    background: #d7337e; /* Slightly darker pink for hover effect */
+  }
+  
+  
+  @media (max-width: 1024px) {
+    .btn {
+        font-size: 1.4rem; /* Adjust font size for tablets */
+        padding: 0.9rem 1.8rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .btn {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        padding: 0.8rem 1.6rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .btn {
+        font-size: 1rem; /* Further reduce font size for very small screens */
+        padding: 0.7rem 1.4rem; /* Further reduce padding */
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .about .row {
+        gap: 1.5rem; /* Adjust gap for tablets */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 45rem; /* Adjust image container size */
+    }
+  
+    .about .row .content {
+        flex: 1 1 45rem; /* Adjust content size */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 2.5rem; /* Adjust heading size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .about .row {
+        gap: 1rem; /* Smaller gap on mobile */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 100%; /* Image container takes full width */
+    }
+  
+    .about .row .content {
+        flex: 1 1 100%; /* Content takes full width */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 2rem; /* Adjust heading size for mobile */
+    }
+  }
+  
+  @media (max-width: 450px) {
+    .about .row {
+        gap: 1rem; /* Ensure minimal gap on very small screens */
+    }
+  
+    .about .row .image-container {
+        flex: 1 1 100%; /* Image container full width */
+    }
+  
+    .about .row .content {
+        flex: 1 1 100%; /* Content full width */
+    }
+  
+    .about .row .image-container h3 {
+        font-size: 1.8rem; /* Reduce heading size for very small screens */
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 1024px) {
     html {
         font-size: 56%;
     }
-
+  
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+  
+    .home .content span {
+        font-size: 3rem;
+    }
+  
     header .logo {
         font-size: 2.5rem;
     }
-
+  
     header .navbar a {
         font-size: 1.8rem;
     }
-
-    .product-details h1 {
-        font-size: 2.5rem;
-    }
-
-    .product-details p {
-        font-size: 1.4rem;
-    }
-
-    .product-details .price {
+  
+    header .icons a {
         font-size: 1.8rem;
     }
-}
-
-@media (max-width: 768px) {
-    header .navbar {
-        display: none;
-    }
-
+  }
+  
+  @media (max-width: 768px) {
     header .fa-bars {
-        display: block;
+        display: block; /* Show the hamburger icon */
     }
-
-    .product-details {
-        padding: 2rem 5%;
+  
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #ffe8b8;
+        flex-direction: column;
+        align-items: center;
+        display: none; /* Hidden by default */
     }
-
-    .product-details h1 {
-        font-size: 2rem;
+  
+    header .navbar.active {
+        display: flex; /* Display when toggled */
     }
-
-    .product-details p {
+  
+    header .navbar a {
+        padding: 1.5rem;
+        background: #ff7487;
+        border: 0.1rem solid rgb(255, 242, 212);
+        width: 100%;
+        text-align: center;
+    }
+  
+    .home .content h3 {
+        font-size: 4rem;
+    }
+  
+    .home .content span {
+        font-size: 4rem;
+    }
+  
+    .home .content {
+        max-width: 30rem; /* Adjust width for smaller screens */
+    }
+  
+    .home .content p {
         font-size: 1.4rem;
     }
-}
-
-@media (max-width: 450px) {
+  
+    .home .btn {
+        font-size: 1.4rem; /* Adjust button size */
+        padding: 1rem 1.5rem; /* Adjust padding */
+    }
+  }
+  
+  @media (max-width: 450px) {
     html {
         font-size: 50%;
     }
-
+  
+    header .icons a {
+        font-size: 2.5rem;
+    }
+  
     header .navbar a {
         font-size: 1.5rem;
     }
-
-    .product-details h1 {
-        font-size: 1.8rem;
+  
+    .home .content h3 {
+        font-size: 3.5rem;
     }
-
-    .product-details p {
+  
+    .home .content span {
+        font-size: 3rem;
+    }
+  
+    .home .content {
+        max-width: 25rem; /* Further reduce width */
+    }
+  
+    .home .content p {
         font-size: 1.2rem;
     }
-
-    .product-details .price {
-        font-size: 1.6rem;
+  
+    .home .btn {
+        font-size: 1.2rem; /* Further reduce button font size */
+        padding: 1rem 1.2rem; /* Adjust button padding */
     }
-}
+  }

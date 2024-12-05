@@ -308,7 +308,9 @@ footer p {
     }
   }
 
-  /* Media Queries for Responsiveness */
+  
+
+/* Media Queries for Responsiveness */
   /* Responsive Design */
   @media (max-width: 768px) {
     .box-container {
@@ -516,4 +518,3 @@ footer p {
         padding: 1rem 1.2rem; /* Adjust button padding */
     }
   }
-  
