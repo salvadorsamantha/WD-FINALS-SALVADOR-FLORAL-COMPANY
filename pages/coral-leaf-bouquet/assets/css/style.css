@@ -382,198 +382,13 @@ footer p {
     }
 }
 
-/* General Reset */
-body, html {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Header */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-color: #f8f9fa; /* Optional styling */
-}
-
-.logo-image {
-    max-width: 50px; /* Adjust size */
-}
-
-.navbar {
-    display: flex;
-    gap: 1rem;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #000;
-}
-
-/* Hamburger icon */
-.fa-bars {
-    font-size: 1.5rem;
-    cursor: pointer;
-    display: none; /* Hidden by default */
-}
-
-/* Responsive Rules */
+/* Display hamburger icon only on small screens */
 @media (max-width: 768px) {
-    .navbar {
-        display: none; /* Initially hidden on smaller screens */
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #fff;
-        width: 200px;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-    }
-
-    .navbar.active {
-        display: flex; /* Show navbar when active */
-    }
-
-    .fa-bars {
-        display: block; /* Show hamburger icon */
-    }
-}
-
-
-
-/* Media Queries for Responsiveness */
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .box-container {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .box {
-        margin-bottom: 20px;
-        flex: 1 1 100%; /* Stack boxes on smaller screens */
-    }
-  }
-  
-
-  
-  /* Hover effect */
-  .btn:hover {
-    background: #d7337e; /* Slightly darker pink for hover effect */
-  }
-  
-  
-  @media (max-width: 1024px) {
-    .btn {
-        font-size: 1.4rem; /* Adjust font size for tablets */
-        padding: 0.9rem 1.8rem; /* Adjust padding */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .btn {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-        padding: 0.8rem 1.6rem; /* Adjust padding */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .btn {
-        font-size: 1rem; /* Further reduce font size for very small screens */
-        padding: 0.7rem 1.4rem; /* Further reduce padding */
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .about .row {
-        gap: 1.5rem; /* Adjust gap for tablets */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 45rem; /* Adjust image container size */
-    }
-  
-    .about .row .content {
-        flex: 1 1 45rem; /* Adjust content size */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 2.5rem; /* Adjust heading size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about .row {
-        gap: 1rem; /* Smaller gap on mobile */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 100%; /* Image container takes full width */
-    }
-  
-    .about .row .content {
-        flex: 1 1 100%; /* Content takes full width */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 2rem; /* Adjust heading size for mobile */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .about .row {
-        gap: 1rem; /* Ensure minimal gap on very small screens */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 100%; /* Image container full width */
-    }
-  
-    .about .row .content {
-        flex: 1 1 100%; /* Content full width */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 1.8rem; /* Reduce heading size for very small screens */
-    }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    html {
-        font-size: 56%;
-    }
-  
-    .home .content h3 {
-        font-size: 3.5rem;
-    }
-  
-    .home .content span {
-        font-size: 3rem;
-    }
-  
-    header .logo {
-        font-size: 2.5rem;
-    }
-  
-    header .navbar a {
-        font-size: 1.8rem;
-    }
-  
-    header .icons a {
-        font-size: 1.8rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
     header .fa-bars {
         display: block; /* Show the hamburger icon */
     }
-  
+
+    /* Style the navbar when hamburger is clicked */
     header .navbar {
         position: absolute;
         top: 100%;
@@ -584,11 +399,13 @@ header {
         align-items: center;
         display: none; /* Hidden by default */
     }
-  
+
+    /* When active, show the navbar */
     header .navbar.active {
-        display: flex; /* Display when toggled */
+        display: flex;
     }
-  
+
+    /* Style navbar links for smaller screens */
     header .navbar a {
         padding: 1.5rem;
         background: #ff7487;
@@ -600,56 +417,56 @@ header {
     .home .content h3 {
         font-size: 4rem;
     }
-  
+
     .home .content span {
         font-size: 4rem;
     }
-  
+
     .home .content {
         max-width: 30rem; /* Adjust width for smaller screens */
     }
-  
+
     .home .content p {
         font-size: 1.4rem;
     }
-  
+
     .home .btn {
         font-size: 1.4rem; /* Adjust button size */
         padding: 1rem 1.5rem; /* Adjust padding */
     }
-  }
-  
-  @media (max-width: 450px) {
+}
+
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }
-  
+
     header .icons a {
         font-size: 2.5rem;
     }
-  
+
     header .navbar a {
         font-size: 1.5rem;
     }
-  
+
     .home .content h3 {
         font-size: 3.5rem;
     }
-  
+
     .home .content span {
         font-size: 3rem;
     }
-  
+
     .home .content {
         max-width: 25rem; /* Further reduce width */
     }
-  
+
     .home .content p {
         font-size: 1.2rem;
     }
-  
+
     .home .btn {
         font-size: 1.2rem; /* Further reduce button font size */
         padding: 1rem 1.2rem; /* Adjust button padding */
     }
-  }
+}

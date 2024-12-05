@@ -228,289 +228,58 @@ header .logo-image {
     }
   }
 
+/* Hide the hamburger icon and navbar by default */
+header .fa-bars {
+    display: none;
+}
 
-/* Make icons responsive for smaller screens */
+header .navbar {
+    display: flex; /* Keep navbar items visible on larger screens */
+}
+
+/* Media query for responsive design */
 @media screen and (max-width: 768px) {
-    .icons-container {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
-    }
-
-    .icons-container .icons {
-        width: 50rem; /* Smaller width for responsiveness */
-        height: 5rem; /* Smaller height for responsiveness */
-    }
-}
-
-/* Button styling */
-.btn {
-    display: inline-block;
-    font-size: 1.6rem;
-    color: #ffffff;
-    background: var(--pink);
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.3s ease-in-out;
-}
-
-.btn:hover {
-    background: #d7337e;
-}
-
-/* Product details section */
-.product-details {
-    padding: 3rem 9%;
-    text-align: center;
-}
-
-.product-details h1 {
-    font-size: 3rem;
-    color: #2d110f;
-}
-
-.product-details img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    margin: 2rem 0;
-}
-
-.product-details p {
-    font-size: 1.6rem;
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-.product-details .price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: var(--pink);
-    margin-bottom: 2rem;
-}
-
-/* Footer styling */
-footer {
-    text-align: center;
-    padding: 1rem;
-    max-width: 500%;
-    height: auto;
-    background: #ff7487;
-    color: #fff;
-}
-
-footer p {
-    font-size: 1.4rem;
-}
-
-
-
-/* Media Queries for Responsiveness */
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .box-container {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .box {
-        margin-bottom: 20px;
-        flex: 1 1 100%; /* Stack boxes on smaller screens */
-    }
-  }
-  
-
-  
-  /* Hover effect */
-  .btn:hover {
-    background: #d7337e; /* Slightly darker pink for hover effect */
-  }
-  
-  
-  @media (max-width: 1024px) {
-    .btn {
-        font-size: 1.4rem; /* Adjust font size for tablets */
-        padding: 0.9rem 1.8rem; /* Adjust padding */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .btn {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
-        padding: 0.8rem 1.6rem; /* Adjust padding */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .btn {
-        font-size: 1rem; /* Further reduce font size for very small screens */
-        padding: 0.7rem 1.4rem; /* Further reduce padding */
-    }
-  }
-  
-  @media (max-width: 1024px) {
-    .about .row {
-        gap: 1.5rem; /* Adjust gap for tablets */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 45rem; /* Adjust image container size */
-    }
-  
-    .about .row .content {
-        flex: 1 1 45rem; /* Adjust content size */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 2.5rem; /* Adjust heading size for smaller screens */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .about .row {
-        gap: 1rem; /* Smaller gap on mobile */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 100%; /* Image container takes full width */
-    }
-  
-    .about .row .content {
-        flex: 1 1 100%; /* Content takes full width */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 2rem; /* Adjust heading size for mobile */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    .about .row {
-        gap: 1rem; /* Ensure minimal gap on very small screens */
-    }
-  
-    .about .row .image-container {
-        flex: 1 1 100%; /* Image container full width */
-    }
-  
-    .about .row .content {
-        flex: 1 1 100%; /* Content full width */
-    }
-  
-    .about .row .image-container h3 {
-        font-size: 1.8rem; /* Reduce heading size for very small screens */
-    }
-  }
-  
-  /* Media Queries */
-  @media (max-width: 1024px) {
-    html {
-        font-size: 56%;
-    }
-  
-    .home .content h3 {
-        font-size: 3.5rem;
-    }
-  
-    .home .content span {
-        font-size: 3rem;
-    }
-  
-    header .logo {
-        font-size: 2.5rem;
-    }
-  
-    header .navbar a {
-        font-size: 1.8rem;
-    }
-  
-    header .icons a {
-        font-size: 1.8rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
+    /* Show the hamburger icon */
     header .fa-bars {
-        display: block; /* Show the hamburger icon */
+        display: block;
     }
-  
+
+    /* Hide navbar items on smaller screens */
     header .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: #ffe8b8;
-        flex-direction: column;
-        align-items: center;
-        display: none; /* Hidden by default */
-    }
-  
-    header .navbar.active {
-        display: flex; /* Display when toggled */
-    }
-  
-    header .navbar a {
-        padding: 1.5rem;
-        background: #ff7487;
-        border: 0.1rem solid rgb(255, 242, 212);
+        display: none;
         width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #ffc2cb;
+        flex-direction: column;
+        padding: 2rem 0;
+        z-index: 1001; /* Make sure the menu stays on top */
+    }
+
+    /* Display the navbar when the hamburger icon is clicked */
+    header .navbar.active {
+        display: flex;
+    }
+
+    /* Add a background color to the navbar links */
+    header .navbar a {
+        font-size: 2rem;
+        color: rgb(53, 87, 14);
+        margin-left: 0;
+        padding: 1rem 0;
         text-align: center;
     }
-  
-    .home .content h3 {
-        font-size: 4rem;
+
+    /* Navbar link hover effect */
+    header .navbar a:hover {
+        background: #ffc2cb;
     }
-  
-    .home .content span {
-        font-size: 4rem;
+}
+
+/* Toggle the navbar visibility when hamburger icon is clicked */
+@media screen and (max-width: 768px) {
+    .hamburger-active .navbar {
+        display: flex;
     }
-  
-    .home .content {
-        max-width: 30rem; /* Adjust width for smaller screens */
-    }
-  
-    .home .content p {
-        font-size: 1.4rem;
-    }
-  
-    .home .btn {
-        font-size: 1.4rem; /* Adjust button size */
-        padding: 1rem 1.5rem; /* Adjust padding */
-    }
-  }
-  
-  @media (max-width: 450px) {
-    html {
-        font-size: 50%;
-    }
-  
-    header .icons a {
-        font-size: 2.5rem;
-    }
-  
-    header .navbar a {
-        font-size: 1.5rem;
-    }
-  
-    .home .content h3 {
-        font-size: 3.5rem;
-    }
-  
-    .home .content span {
-        font-size: 3rem;
-    }
-  
-    .home .content {
-        max-width: 25rem; /* Further reduce width */
-    }
-  
-    .home .content p {
-        font-size: 1.2rem;
-    }
-  
-    .home .btn {
-        font-size: 1.2rem; /* Further reduce button font size */
-        padding: 1rem 1.2rem; /* Adjust button padding */
-    }
-  }
+}
