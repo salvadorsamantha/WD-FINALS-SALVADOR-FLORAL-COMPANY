@@ -179,6 +179,86 @@ header .logo-image {
 }
 
 
+
+
+
+
+/* Make icons responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .icons-container {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+    }
+
+    .icons-container .icons {
+        width: 50rem; /* Smaller width for responsiveness */
+        height: 5rem; /* Smaller height for responsiveness */
+    }
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #ffffff;
+    background: var(--pink);
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #d7337e;
+}
+
+/* Product details section */
+.product-details {
+    padding: 3rem 9%;
+    text-align: center;
+}
+
+.product-details h1 {
+    font-size: 3rem;
+    color: #2d110f;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    margin: 2rem 0;
+}
+
+.product-details p {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.product-details .price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--pink);
+    margin-bottom: 2rem;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    max-width: 500%;
+    height: auto;
+    background: #ff7487;
+    color: #fff;
+}
+
+footer p {
+    font-size: 1.4rem;
+}
+
+
 .petal {
     position: absolute;
     width: 30px;
@@ -228,6 +308,79 @@ header .logo-image {
     }
   }
 
+
+
+
+/* Media queries for responsiveness */
+@media (max-width: 1024px) {
+    html {
+        font-size: 56%;
+    }
+
+    header .logo {
+        font-size: 2.5rem;
+    }
+
+    header .navbar a {
+        font-size: 1.8rem;
+    }
+
+    .product-details h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+
+    .product-details .price {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        display: none;
+    }
+
+    header .fa-bars {
+        display: block;
+    }
+
+    .product-details {
+        padding: 2rem 5%;
+    }
+
+    .product-details h1 {
+        font-size: 2rem;
+    }
+
+    .product-details p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .product-details h1 {
+        font-size: 1.8rem;
+    }
+
+    .product-details p {
+        font-size: 1.2rem;
+    }
+
+    .product-details .price {
+        font-size: 1.6rem;
+    }
+}
 
 /* Display hamburger icon only on small screens */
 @media (max-width: 768px) {
