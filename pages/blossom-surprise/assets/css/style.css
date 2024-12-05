@@ -228,58 +228,92 @@ header .logo-image {
     }
   }
 
-/* Hide the hamburger icon and navbar by default */
-header .fa-bars {
-    display: none;
-}
 
-header .navbar {
-    display: flex; /* Keep navbar items visible on larger screens */
-}
-
-/* Media query for responsive design */
-@media screen and (max-width: 768px) {
-    /* Show the hamburger icon */
+/* Display hamburger icon only on small screens */
+@media (max-width: 768px) {
     header .fa-bars {
-        display: block;
+        display: block; /* Show the hamburger icon */
     }
 
-    /* Hide navbar items on smaller screens */
+    /* Style the navbar when hamburger is clicked */
     header .navbar {
-        display: none;
-        width: 100%;
         position: absolute;
-        top: 0;
+        top: 100%;
         left: 0;
-        background: #ffc2cb;
+        right: 0;
+        background: #ffe8b8;
         flex-direction: column;
-        padding: 2rem 0;
-        z-index: 1001; /* Make sure the menu stays on top */
+        align-items: center;
+        display: none; /* Hidden by default */
     }
 
-    /* Display the navbar when the hamburger icon is clicked */
+    /* When active, show the navbar */
     header .navbar.active {
         display: flex;
     }
 
-    /* Add a background color to the navbar links */
+    /* Style navbar links for smaller screens */
     header .navbar a {
-        font-size: 2rem;
-        color: rgb(53, 87, 14);
-        margin-left: 0;
-        padding: 1rem 0;
+        padding: 1.5rem;
+        background: #ff7487;
+        border: 0.1rem solid rgb(255, 242, 212);
+        width: 100%;
         text-align: center;
     }
+  
+    .home .content h3 {
+        font-size: 4rem;
+    }
 
-    /* Navbar link hover effect */
-    header .navbar a:hover {
-        background: #ffc2cb;
+    .home .content span {
+        font-size: 4rem;
+    }
+
+    .home .content {
+        max-width: 30rem; /* Adjust width for smaller screens */
+    }
+
+    .home .content p {
+        font-size: 1.4rem;
+    }
+
+    .home .btn {
+        font-size: 1.4rem; /* Adjust button size */
+        padding: 1rem 1.5rem; /* Adjust padding */
     }
 }
 
-/* Toggle the navbar visibility when hamburger icon is clicked */
-@media screen and (max-width: 768px) {
-    .hamburger-active .navbar {
-        display: flex;
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+
+    header .icons a {
+        font-size: 2.5rem;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .home .content span {
+        font-size: 3rem;
+    }
+
+    .home .content {
+        max-width: 25rem; /* Further reduce width */
+    }
+
+    .home .content p {
+        font-size: 1.2rem;
+    }
+
+    .home .btn {
+        font-size: 1.2rem; /* Further reduce button font size */
+        padding: 1rem 1.2rem; /* Adjust button padding */
     }
 }
