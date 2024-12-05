@@ -382,3 +382,49 @@ footer p {
         font-size: 1.6rem;
     }
 }
+
+/* Default navbar styling */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    list-style: none;
+}
+
+/* Hide the navbar initially on smaller screens */
+.navbar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    background-color: #fff; /* Adjust as needed */
+    top: 50px; /* Adjust for the header height */
+    right: 10px;
+    left: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Show navbar when active */
+.navbar.active {
+    display: flex;
+}
+
+/* Hamburger icon styling */
+.fa-bars {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive adjustments for small devices */
+@media (max-width: 768px) {
+    .fa-bars {
+        display: block;
+    }
+
+    .navbar {
+        display: none; /* Hidden by default */
+    }
+}

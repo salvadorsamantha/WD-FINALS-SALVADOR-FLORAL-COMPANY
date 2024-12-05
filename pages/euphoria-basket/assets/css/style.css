@@ -382,3 +382,49 @@ footer p {
         font-size: 1.6rem;
     }
 }
+
+/* Base styles for the hamburger menu */
+.navbar {
+    display: flex;
+    gap: 20px;
+    transition: max-height 0.3s ease-in-out;
+  }
+  
+  /* Hide the menu by default on small screens */
+  .navbar.active {
+    max-height: 200px; /* Adjust as needed */
+    display: block;
+  }
+  
+  .fa-bars {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .navbar {
+      display: none;
+      flex-direction: column;
+      max-height: 0;
+      overflow: hidden;
+      width: 100%;
+      background-color: #fff; /* Adjust based on your design */
+    }
+  
+    .fa-bars {
+      display: block;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+  
+    .navbar a {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd; /* Optional styling */
+    }
+  }
+  

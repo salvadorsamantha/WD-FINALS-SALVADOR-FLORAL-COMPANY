@@ -381,3 +381,64 @@ footer p {
         font-size: 1.6rem;
     }
 }
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa; /* Optional styling */
+}
+
+.logo-image {
+    max-width: 50px; /* Adjust size */
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Hamburger icon */
+.fa-bars {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default */
+}
+
+/* Responsive Rules */
+@media (max-width: 768px) {
+    .navbar {
+        display: none; /* Initially hidden on smaller screens */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #fff;
+        width: 200px;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .navbar.active {
+        display: flex; /* Show navbar when active */
+    }
+
+    .fa-bars {
+        display: block; /* Show hamburger icon */
+    }
+}

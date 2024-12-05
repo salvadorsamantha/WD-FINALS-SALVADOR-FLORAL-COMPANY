@@ -519,3 +519,57 @@ h2 {
         font-size: 1.6rem;
     }
 }
+
+/* General styles for header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.fa-bars {
+    font-size: 24px;
+    cursor: pointer;
+    display: none; /* Default hidden */
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.navbar.active {
+    display: block;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .fa-bars {
+        display: block; /* Show hamburger on smaller devices */
+    }
+
+    .navbar {
+        display: none; /* Initially hidden */
+    }
+}
